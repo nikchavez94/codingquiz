@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,35 +8,87 @@
     <link rel="stylesheet" type="text/css" href="./assets/style.css" />
 
 </head>
+
 <body>
-   <form id="quizform" action="results" method="post">
-    <div id="screen1" class="screen">
-    <h1>Coding Quiz Challenge</h1> 
-    <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
-   <button onclick="nextscreen2">Start Quiz</button>
-   <hr>
-   <label id="QuestionResult" style="color:gray;font-size:25px;"></label>
-   </div>
+    <div class="container" style="display: flex; flex-direction: column; align-items: center;">
 
-   <div id="screen2" class="screen">
-    <h1>Commonly used data types DO Not Include:</h1>
-    <button id="wrong" onclick="nextscreen3">1. strings</button>
-    <button id="wrong" onclick="nextscreen3">2. booleans</button>
-    <button id="correct"onclick="nextscreen3">3. alerts</button>
-    <button id="wrong" onclick="nextscreen3">4. numbers</button>
-    <hr>
-    <label id="QuestionResult" style="color:gray;font-size:25px;"></label>
-   </div>
+        <form id="quizform" action="results" method="post">
+            <div id="screen1" class="screen">
+                <h1>Coding Quiz Challenge</h1>
+                <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect
+                    answers will penalize your score/time by ten seconds!</p>
+                <button onclick="nextscreen2">Start Quiz</button>
+                <hr>
 
-   <div id="screen3" class="screen">
-    <h1>The condition in an if/else statement is enclosed with ___________.</h1>
-    <button id="wrong" onclick="nextscreen3">1. quotes</button>
-    <button id="correct" onclick="nextscreen3">2. curly brackets</button>
-    <button id="wrong" onclick="nextscreen3">3. parenthesis</button>
-    <button id="wrong" onclick="nextscreen3">4. square brackets</button>
-    <hr>
-    <label id="QuestionResult" style="color:gray;font-size:25px;"></label>
-   </div>
-   </form>
+            </div>
+
+            <div id="screen2" class="screen">
+                <h1>Commonly used data types DO Not Include:</h1>
+                <button id="wrong" onclick="nextscreen3">1. strings</button>
+                <button id="wrong" onclick="nextscreen3">2. booleans</button>
+                <button id="correct" onclick="nextscreen3">3. alerts</button>
+                <button id="wrong" onclick="nextscreen3">4. numbers</button>
+                <hr>
+                <label id="QuestionResult2" style="color:gray;font-size:25px;"></label>
+            </div>
+
+            <div id="screen3" class="screen">
+                <h1>The condition in an if/else statement is enclosed with ___________.</h1>
+                <button id="wrong" onclick="nextscreen3">1. quotes</button>
+                <button id="correct" onclick="nextscreen3">2. curly brackets</button>
+                <button id="wrong" onclick="nextscreen3">3. parenthesis</button>
+                <button id="wrong" onclick="nextscreen3">4. square brackets</button>
+                <hr>
+                <label id="QuestionResult3" style="color:gray;font-size:25px;"></label>
+            </div>
+
+            <div id="screen4" class="screen">
+                <h1>Arrays in JavaScript can be used to store _________.</h1>
+                <button id="wrong" onclick="nextscreen4">1. numbers and strings</button>
+                <button id="wrong" onclick="nextscreen4">2. other arrays</button>
+                <button id="wrong" onclick="nextscreen4">3. booleans</button>
+                <button id="correct" onclick="nextscreen4">4. all of the above</button>
+                <hr>
+                <label id="QuestionResult4" style="color:gray;font-size:25px;"></label>
+            </div>
+
+            <div id="screen5" class="screen">
+                <h1>String values must be enclosed within _________ when being assigned to variables.</h1>
+                <button id="wrong" onclick="nextscreen5">1. commas</button>
+                <button id="wrong" onclick="nextscreen5">2. curly brackets</button>
+                <button id="correct" onclick="nextscreen5">3. quotes</button>
+                <button id="wrong" onclick="nextscreen5">4. parenthesis</button>
+                <hr>
+                <label id="QuestionResult5" style="color:gray;font-size:25px;"></label>
+            </div>
+
+            <div id="screen6" class="screen">
+                <h1>A very useful tool used during development and debugging for printing content to the debugger is:
+                </h1>
+                <button id="wrong" onclick="nextscreen6">1. JavaScript</button>
+                <button id="wrong" onclick="nextscreen6">2. terminal/bash</button>
+                <button id="wrong" onclick="nextscreen6">3. for loops</button>
+                <button id="correct" onclick="nextscreen6">4. console.log</button>
+                <hr>
+                <label id="QuestionResult6" style="color:gray;font-size:25px;"></label>
+            </div>
+
+            <div id="screen7" class="screen">
+                <h2>All done!</h2>
+                <p> Your final score is <span id="grade">.</span></p>
+                <p>Enter initials: <input id="initialsInput"></input>
+                    <button id="submitInitialsBtn" onclick="nextscreen7">Submit</button>
+                </p>
+            </div>
+
+            <div id="highScores" class="screen">
+                <h1>High Scores</h1>
+                <ul id="highScoresList"></ul>
+                <button id="goBackBtn" onclick="nextscreen7">Go Back</button>
+                <button id="clearScoresBtn" onclick="clearScores">Clear High Scores</button>
+            </div>
+        </form>
+    </div>
 </body>
+
 </html>
