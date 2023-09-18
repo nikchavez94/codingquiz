@@ -5,6 +5,7 @@ margin:20px;
 padding-left: 200px;
 padding-right: 50px;
 padding-top: 20px;
+padding-bottom: 20px;
 }
 
 button {
@@ -50,7 +51,21 @@ align-items: left;
 justify-self: flex-start
 }
 
-hr {
+#hr {
 border: none;
-border-top: 2px solid #333;
+border-top: 1px solid gray;
+}
+
+.line_break {
+    width:800px;
+    height: 5px;
+    }
+
+#timer {
+float: right;
+text-align: right;
+}
+
+.screen:not(.screen:not(.current)) {
+display: none;
 }
