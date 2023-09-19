@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="./assets/style.css"/>
-
+    
 </head>
 
 <body>
@@ -14,86 +14,87 @@
 
         <form id="quizform" action="results" method="post">
             <header>
-            <a class="highscorestopleft" href="#highScores">View high scores</a>
-            <div id="timer">Time:</div>
+                <a id="viewHighScoresLink" class="highscorestopleft" href="#">View high scores</a>
+                <div id="timer">Time:</div>
             </header>
-            <div id="screen1" class="screen-beginning">
+            <div id="screen1" class="screenStart">
                 <h1>Coding Quiz Challenge</h1>
                 <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect
                     answers will penalize your score/time by ten seconds!</p>
-                <button id="StartQBtn" onclick="nextscreen2()">Start Quiz</button>
+                <button id="StartQBtn" type="button" onclick="nextscreen2()">Start Quiz</button>
                 <hr class="line_break">
 
             </div>
 
             <div id="screen2" class="screen">
                 <h1>Commonly used data types DO Not Include:</h1>
-                <button id="wrong" onclick="nextscreen3()">1. strings</button>
-                <button id="wrong" onclick="nextscreen3()">2. booleans</button>
-                <button id="correct" onclick="nextscreen3()">3. alerts</button>
-                <button id="wrong" onclick="nextscreen3()">4. numbers</button>
+                <button id="btn21" type="button" onclick="evaluateAnswer('wrong')">1. strings</button>
+                <button id="btn22" type="button" onclick="evaluateAnswer('wrong')">2. booleans</button>
+                <button id="btn23" type="button" onclick="evaluateAnswer('correct')">3. alerts</button>
+                <button id="btn24" type="button" onclick="evaluateAnswer('wrong')">4. numbers</button>
                 <hr class="line_break">
-                <label id="QuestionResult2" style="color:gray;font-size:25px;"></label>
             </div>
 
             <div id="screen3" class="screen">
                 <h1>The condition in an if/else statement is enclosed with ___________.</h1>
-                <button id="wrong" onclick="nextscreen4()">1. quotes</button>
-                <button id="correct" onclick="nextscreen4()">2. curly brackets</button>
-                <button id="wrong" onclick="nextscreen4()">3. parenthesis</button>
-                <button id="wrong" onclick="nextscreen4()">4. square brackets</button>
+                <button id="btn31" type="button" onclick="evaluateAnswer('wrong')">1. quotes</button>
+                <button id="btn32" type="button" onclick="evaluateAnswer('correct')">2. curly brackets</button>
+                <button id="btn33" type="button" onclick="evaluateAnswer('wrong')">3. parenthesis</button>
+                <button id="btn34" type="button" onclick="evaluateAnswer('wrong')">4. square brackets</button>
                 <hr class="line_break">
-                <label id="QuestionResult3" style="color:gray;font-size:25px;"></label>
+                <label id="QuestionResult2" style="color:gray;font-size:25px;"></label>
             </div>
 
             <div id="screen4" class="screen">
                 <h1>Arrays in JavaScript can be used to store _________.</h1>
-                <button id="wrong" onclick="nextscreen5()">1. numbers and strings</button>
-                <button id="wrong" onclick="nextscreen5()">2. other arrays</button>
-                <button id="wrong" onclick="nextscreen5()">3. booleans</button>
-                <button id="correct" onclick="nextscreen5()">4. all of the above</button>
+                <button id="btn41" type="button" onclick="evaluateAnswer('wrong')">1. numbers and strings</button>
+                <button id="btn42" type="button" onclick="evaluateAnswer('wrong')">2. other arrays</button>
+                <button id="btn43" type="button" onclick="evaluateAnswer('wrong')">3. booleans</button>
+                <button id="btn44" type="button" onclick="evaluateAnswer('correct')">4. all of the above</button>
                 <hr class="line_break">
-                <label id="QuestionResult4" style="color:gray;font-size:25px;"></label>
+                <label id="QuestionResult3" style="color:gray;font-size:25px;"></label>
             </div>
 
             <div id="screen5" class="screen">
                 <h1>String values must be enclosed within _________ when being assigned to variables.</h1>
-                <button id="wrong" onclick="nextscreen6()">1. commas</button>
-                <button id="wrong" onclick="nextscreen6()">2. curly brackets</button>
-                <button id="correct" onclick="nextscreen6()">3. quotes</button>
-                <button id="wrong" onclick="nextscreen6()">4. parenthesis</button>
+                <button id="btn51" type="button" onclick="evaluateAnswer('wrong')">1. commas</button>
+                <button id="btn52" type="button" onclick="evaluateAnswer('wrong')">2. curly brackets</button>
+                <button id="btn53" type="button" onclick="evaluateAnswer('correct')">3. quotes</button>
+                <button id="btn54" type="button" onclick="evaluateAnswer('wrong')">4. parenthesis</button>
                 <hr class="line_break">
-                <label id="QuestionResult5" style="color:gray;font-size:25px;"></label>
+                <label id="QuestionResult4" style="color:gray;font-size:25px;"></label>
             </div>
 
             <div id="screen6" class="screen">
                 <h1>A very useful tool used during development and debugging for printing content to the debugger is:
                 </h1>
-                <button id="wrong" onclick="nextscreen7()">1. JavaScript</button>
-                <button id="wrong" onclick="nextscreen7()">2. terminal/bash</button>
-                <button id="wrong" onclick="nextscreen7()">3. for loops</button>
-                <button id="correct" onclick="nextscreen7()">4. console.log</button>
+                <button id="btn61" type="button" onclick="evaluateAnswer('wrong')">1. JavaScript</button>
+                <button id="btn62" type="button" onclick="evaluateAnswer('wrong')">2. terminal/bash</button>
+                <button id="btn63" type="button" onclick="evaluateAnswer('wrong')">3. for loops</button>
+                <button id="btn64" type="button" onclick="evaluateAnswer('correct')">4. console.log</button>
                 <hr class="line_break">
-                <label id="QuestionResult6" style="color:gray;font-size:25px;"></label>
+                <label id="QuestionResult5" style="color:gray;font-size:25px;"></label>
             </div>
 
             <div id="screen7" class="screen">
                 <h2>All done!</h2>
                 <p> Your final score is <span id="grade">.</span></p>
-                <p>Enter initials: <input id="initialsInput"></input>
-                    <button id="submitInitialsBtn" onclick="nextscreen7()">Submit</button>
-                </p>
+                <label for="initialsInput">Enter initials:</label>
+                <input type="text" id="initialsInput">
+                <button id="submitInitialsBtn" type="button" onclick="nextscreen8()">Submit</button>
+                <label id="QuestionResult6" style="color:gray;font-size:25px; display:none;"></label>
             </div>
 
-            <div id="highScores" class="screen">
+            <div id="screen8" class="screen">
                 <h1>High Scores</h1>
                 <ul id="highScoresList"></ul>
-                <button id="goBackBtn" onclick="nextscreen7()">Go Back</button>
-                <button id="clearScoresBtn" onclick="clearScores()">Clear High Scores</button>
+                <button id="goBackBtn" type="button" onclick="nextscreen7()">Go Back</button>
+                <button id="clearScoresBtn" type="button" onclick="clearScores()">Clear High Scores</button>
             </div>
         </form>
 
     </div>
+    <script src="./assets/script.js"></script>
 </body>
 
 </html>
