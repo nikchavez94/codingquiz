@@ -125,7 +125,7 @@ function evaluateAnswer(selectedButtonId) {
         AnswerStr = "Incorrecto, perdiste 5 segundos.";
     }
     /// Display the result in the corresponding label
-    document.getElementById(resultLabelId).textContent = AnswerStr;
+    document.getElementById("highScoresList").textContent = AnswerStr;
 
     // Increment the number of questions answered
     questionsAnswered++;
